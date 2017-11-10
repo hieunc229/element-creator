@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/hieunc229/element-creator.svg?branch=master)](https://travis-ci.org/hieunc229/element-creator)
 # Element Creator
 
 A javascript that helps creating html elements easily. Inspired by mithriljs framework.
