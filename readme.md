@@ -25,7 +25,7 @@ Where:
 
 | Parameters        | Default | Description                           | Example |
 |-------------------|---------|---------------------------------------|---------|
-| elementType       | div     | Type of element or element's tag type | `p` or `h1` |
+| elementType       | div     | Type of element or element's tag type | `p` or `h1`. Use default incase left empty |
 | elementId         |         | Element's id                          | `#firstParagraph` |
 | elementClasses    |         | Element classes                       | `.class__1` or multiple classes `.class__1.class_2` |
 | elementAtrributes |         | Element attributes                    | `[name=title]` or multiple attributes `[name=title,ref=titleRef]`|
