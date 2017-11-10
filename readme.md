@@ -1,6 +1,6 @@
 # Element Creator
 
-A javascript library that helps creating html elements easily. Inspired by mithriljs framework.
+A javascript that helps creating html elements easily. Inspired by mithriljs framework.
 
 ## Installation
 

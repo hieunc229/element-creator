@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The Morden Text Editor</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:400,400i,700|Noto+Serif:400,400i,700&amp;subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="content"></div>
+    <script src="element-creator.js"></script>
+    <script>
+        let views = e('.wrapper', [
+            e('h1', 'Page title'),
+            e('p', "It's works"),
+            n('button', 'change above text', {
+                on: {
+                    'click': function (e) {
+                        e.wrap('p').val('Text changed');
+                    }
+                }
+            })
+        ]),
+            containerElement = e.wrap('.content');
+
+        containerElement.appendChild(view);
+    </script>
+</body>
+
+</html>
