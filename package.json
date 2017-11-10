@@ -6,7 +6,7 @@
   "scripts": {
     "build": "WEBPACK_ENV=build webpack",
     "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-register --require ./tests/helper.js ./tests/test.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,13 @@
   },
   "homepage": "https://github.com/hieunc229/element-creator#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-preset-env": "^1.6.1",
     "mocha": "^4.0.1",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
   }
 }

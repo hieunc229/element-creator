@@ -9,7 +9,7 @@ function ElementCreator(elementName, children = null, options = null) {
     if (CLASSES) { element.className = CLASSES }
     if (ID) { element.id = ID }
     if (ATTRS) { ATTRS.forEach(attr => element.setAttribute(attr[0], attr[1])) }
-
+    
     element.append(children);
 
     if (!options) { return element; }
