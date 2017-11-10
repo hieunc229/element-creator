@@ -2,6 +2,14 @@
 
 A javascript library that helps creating html elements easily
 
+## Installation
+
+Element Creator is available on NPM, run below command to install:
+
+```ssh
+npm install element-creator
+```
+
 ## How to use?
 
 ```javascript
@@ -44,7 +52,7 @@ var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
 ```
 
 
-The variable `myDiv` above generates 'div' html element with `click` event that prop an alert message.
+The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
 ```html
 <div id="myElement" class="class__1" name="awesome-div" >My awesome div</div>
 ```
