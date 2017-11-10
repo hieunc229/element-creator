@@ -4,6 +4,7 @@ node_js:
 install:
 - npm install mocha -g
 - npm install babel-core
+- npm install jsdom
 - npm install
 script:
 - npm run test
