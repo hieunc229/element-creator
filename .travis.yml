@@ -1,1 +1,10 @@
-language: javascript
+language: node_js
+node_js:
+- "stable"
+install:
+- npm install mocha -g
+- npm install babel-core
+- npm install
+script:
+- npm run test
+
