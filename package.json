@@ -1,7 +1,7 @@
 {
   "name": "element-creator",
   "version": "1.0.0",
-  "description": "A javascript library that helps creating html elements easily",
+  "description": "A javascript library that helps creating html elements easily. Inspired by mithriljs framework.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
