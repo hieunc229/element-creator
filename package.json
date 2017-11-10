@@ -4,7 +4,8 @@
   "description": "A javascript library that helps creating html elements easily. Inspired by mithriljs framework.",
   "main": "index.js",
   "scripts": {
-    "build": "WEBPACK_ENV=build webpack",
+    "build": "webpack",
+    "build-browser": "webpack --config webpack.browser.config.js",
     "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
     "test": "mocha --compilers js:babel-register --require ./tests/helper.js ./tests/test.js"
   },

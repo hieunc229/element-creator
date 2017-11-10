@@ -1,14 +1,21 @@
 [![Build Status](https://travis-ci.org/hieunc229/element-creator.svg?branch=master)](https://travis-ci.org/hieunc229/element-creator)
 # Element Creator
 
-A javascript that helps creating html elements easily. Inspired by mithriljs framework.
+A library that helps to create HTML elements (virtual dom) easily. Inspired by MithrilJs framework.
 
 ## Installation
 
-Element Creator is available on NPM, run below command to install:
+Element Creator is available on NPM and as a Javascript library.
+
+Install on NPM
 
 ```ssh
 npm install element-creator
+```
+
+Or include on html file
+```html
+<script  type="text/javascript" src="{link-to-element-creator}.js"></script>
 ```
 
 ## How to use?
@@ -38,22 +45,22 @@ Where:
   - attrs: element's attributes
   - data: element's data
 
-## Example
+## Examples:
+
+A one page content example located at `build/index.html`. Or a quick demo below
 
 ```javascript
+// using node with es6, otherwise var e = require('element-creator');
 import e from 'element-creator';
 
 var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
-    on: {
-        'click': function(e) {
-            alert('You have clicked on My awesome div');
-        }
-    }
+    on: { 'click': function(e) {
+        alert('You have clicked on My awesome div');
+    }}
 })
 ```
 
-
 The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
 ```html
-<div id="myElement" class="class__1" name="awesome-div" >My awesome div</div>
+<div id="myElement" class="class__1" name="awesome-div">My awesome div</div>
 ```

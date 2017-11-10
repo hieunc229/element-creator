@@ -1,0 +1,214 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Element Creator - Test</title>
+    <meta name="description" content="Element Creator - Test">
+    <meta name="author" content="Hieu (Jack) Nguyen">
+    <style>
+        @import url('http://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:400,400i,700|Noto+Serif:400,400i,700&amp;subset=vietnamese');
+        
+        :root {
+
+            /* Theme color */
+            --t: #121C25;
+            --t2: #13314D;
+            /* shade 1 */
+            --t3: #184169;
+            --t4: #77a4ca;
+            --t5: #3898F5;
+
+            --tn: white;
+
+            --serif: 'Noto Serif', serif;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: unset;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 12pt;
+        }
+
+        /* ==================================== */
+
+        /* ========== PAGE CONTAINER ========== */
+
+        /* ==================================== */
+
+        .page__wrap {
+            width: 960px;
+            margin: auto;
+        }
+
+        header {
+            background: var(--t);
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 60px;
+            z-index: 1;
+        }
+
+        .page__logo {
+            color: var(--tn);
+            font-size: 1.6em;
+            position: relative;
+        }
+
+        .page__logo::after {
+            content: "";
+            width: 5pt;
+            height: 5pt;
+            position: absolute;
+            border: 1.5pt solid var(--t3);
+            right: -9pt;
+        }
+
+        .page__nav {
+            list-style-type: none;
+        }
+
+        .page__nav li {
+            display: inline-block
+        }
+
+        .page__nav li a {
+            color: var(--tn);
+            padding: 6pt 24pt;
+        }
+
+        .page__nav li a:hover {
+            color: var(--t5);
+        }
+
+
+        .page__heading {
+            text-align: center;
+            padding: 3em;
+            background: var(--t2);
+            color: var(--tn);
+            margin-top: 60px;
+        }
+
+        .page__heading h1 {
+            color: var(--tn);
+            line-height: 1.5em;
+            font-size: 3.998em
+        }
+
+        .page__heading .page__heading__desc {
+            color: var(--t4);
+        }
+
+        .page__content {
+            margin: auto;
+            margin-top: 60px;
+            font-family: var(--serif);
+            font-size: 18px;
+            line-height: 2em;
+            width: 600px;
+        }
+
+        .page__content p {
+            margin: 1.5em 0;
+        }
+
+        footer {
+            background: var(--t);
+            padding: 1em;
+            color: var(--tn);
+            text-align: center;
+            margin-top: 1em;
+            font-size: 14px;
+        }
+
+        /* ==================================== */
+        /* ========== SHARED THEME ============ */
+        /* ==================================== */
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex__sright {
+            margin-right: auto
+        }
+
+        .flex__ccentered {
+            align-items: center
+        }
+
+        /* ==================================== */
+        /* ========== EFFECTS ================= */
+        /* ==================================== */
+
+        a {
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+            transition: .2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content"></div>
+    <footer>@ element-creator </footer>
+    <script src="element-creator.min.js"></script>
+    <script>
+        var props = {
+            nav: [
+                { name: 'Github', slug: 'https://github.com/hieunc229/element-creator' },
+                { name: 'Author', slug: 'https://hieunc.com' }
+            ],
+            pageTitle: 'ElementCreator',
+            contents: [
+                'Nowadays, media development has many positive influences in human’s life. People have lots of sources to get information and take entertainment such as television, radio, Internet, etc. but nobody can deny the importance as well as the benefits of reading books.',
+                'First, reading books helps us widen our knowledge. Vietnamese has a proverb which means that we should travel to broad our understanding, if we always stay at home with our mother, we will never be wise. However, nowadays, not only does reading books costs less money but it is also more comfortable than taking a trip. We just lie on the couch and comprehensive what is happening in the books. Thanks to the wide range of books such as science, literature, astronomy, archeology, biology, physics, etc. we can get information focus on our own fields as well as the others. The more books we have read, the more knowing we have obtained.',
+                'Secondly, reading books helps us improve our expression ability like writing and speaking. The writing style of some our favorite writers will affect ours. Especially, when we read foreign literature, we will not only know more about that country but also have chance to improve our reading skill, learn new words which can be used to better our essays.',
+                'Last but not least, reading books helps us relax after a hard-working day. It is also an interest for everybody who does not like to visit crowded places at the weekend. They like quiet atmosphere and do not want to disturb anybody so they consider books as their close friend. They meet their stories, their lives in books and they feel extremely sympathetic with the characters’ situations. Reading books makes them happy and relieve stress.',
+                'In conclusion, reading books is so important and has many benefits. It not only help us become more clever but also bring us happiness. Therefore, everyone should be encouraged to read books as much as possible.'
+            ]
+        }
+
+        function renderNavigationItem(item) {
+            return e('li', e(`a[href=${item.slug}`, item.name));
+        }
+        var views = e('.page', [
+            e('header.flex.flex__ccentered', e('.page__wrap.flex', [
+                e('.page__logo.flex__sright', props.pageTitle),
+                e('ul.page__nav.flex.flex__ccentered', [
+                    props.nav.map(renderNavigationItem)
+                ])
+            ])),
+            e('.page__heading', [
+                e('.page__wrap', [
+                    e('h1', 'Reading books'),
+                    e('p.page__heading__desc', 'A 140 words describe its benefit.'),
+                ])
+            ]),
+            e('.page__content.page__wrap', 
+                props.contents.map(function(paragraphContent) {
+                    return e('p', paragraphContent)
+                })
+            ),
+            e('.page__content.page__content__source', 'Source: cauhoiontap.com')
+        ]);
+        e.wrap('.content').append(views);
+    </script>
+</body>
+
+</html>
