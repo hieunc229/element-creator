@@ -18,12 +18,12 @@ describe("ElementCreator", function () {
         })
 
         it("has 1 attribute 'name' as 'myDiv'", function () {
-            assert.equal(element.attributes['name'], 'myDiv');
+            assert.equal(element.getAttribute('name'), 'myDiv');
         })
     })
 
     document.body.innerHTML = "<div class='test__div'></div>";
-    describe('Add element wrapper e.wrap("")', function() {
+    describe("Test element wrapper with 'e.wrap'", function() {
         
         it('wrap .test__div element within document\'s body', function() {
             let testElement = e.wrap('.test__div');
