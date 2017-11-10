@@ -1,0 +1,22 @@
+{
+  "name": "element-creator",
+  "version": "1.0.0",
+  "description": "A javascript library that helps creating html elements easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieunc229/element-creator.git"
+  },
+  "keywords": [
+    "element"
+  ],
+  "author": "Hieu (Jack)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hieunc229/element-creator/issues"
+  },
+  "homepage": "https://github.com/hieunc229/element-creator#readme"
+}
