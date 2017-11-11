@@ -37,6 +37,8 @@ var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
 The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
 ```html
 <div id="myElement" class="class__1" name="awesome-div">My awesome div</div>
+```
+
 
 ## How to use?
 
@@ -64,4 +66,3 @@ Where:
   - on: add event listener
   - attrs: element's attributes
   - data: element's data
-```
