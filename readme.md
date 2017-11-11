@@ -1,5 +1,5 @@
 
-# element-creator [![Build Status](https://travis-ci.org/hieunc229/element-creator.svg?branch=master)](https://travis-ci.org/hieunc229/element-creator) [![size](http://img.badgesize.io/https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js?max=100000&softmax=200000)](https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js) [![npm version](https://badge.fury.io/js/element-creator.svg)](https://badge.fury.io/js/element-creator) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# element-creator [![Build Status](https://travis-ci.org/hieunc229/element-creator.svg?branch=master)](https://travis-ci.org/hieunc229/element-creator) [![size](http://img.badgesize.io/https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js?max=100000&softmax=200000)](https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js) [![npm version](https://badge.fury.io/js/element-creator.svg)](https://www.npmjs.com/package/element-creator) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A library that helps to create interactive HTML elements (virtual dom) easily. Inspired by MithrilJs framework.
 
