@@ -19,6 +19,25 @@ Or include on html file on unpkg
 <script  type="text/javascript" src="https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js"></script>
 ```
 
+## Examples:
+
+A one page content example located at `build/index.html`. Or a quick demo below
+
+```javascript
+// using node with es6, otherwise var e = require('element-creator');
+import e from 'element-creator';
+
+var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
+    on: { 'click': function(e) {
+        alert('You have clicked on My awesome div');
+    }}
+})
+```
+
+The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
+```html
+<div id="myElement" class="class__1" name="awesome-div">My awesome div</div>
+
 ## How to use?
 
 ```javascript
@@ -45,23 +64,4 @@ Where:
   - on: add event listener
   - attrs: element's attributes
   - data: element's data
-
-## Examples:
-
-A one page content example located at `build/index.html`. Or a quick demo below
-
-```javascript
-// using node with es6, otherwise var e = require('element-creator');
-import e from 'element-creator';
-
-var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
-    on: { 'click': function(e) {
-        alert('You have clicked on My awesome div');
-    }}
-})
-```
-
-The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
-```html
-<div id="myElement" class="class__1" name="awesome-div">My awesome div</div>
 ```
