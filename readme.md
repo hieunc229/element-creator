@@ -1,11 +1,15 @@
-[![Build Status](https://travis-ci.org/hieunc229/element-creator.svg?branch=master)](https://travis-ci.org/hieunc229/element-creator)
-# Element Creator
 
-A library that helps to create HTML elements (virtual dom) easily. Inspired by MithrilJs framework.
+# element-creator [![Build Status](https://travis-ci.org/hieunc229/element-creator.svg?branch=master)](https://travis-ci.org/hieunc229/element-creator) [![size](http://img.badgesize.io/https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js?max=100000&softmax=200000)](https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js) [![npm version](https://badge.fury.io/js/element-creator.svg)](https://www.npmjs.com/package/element-creator) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A library that helps to create interactive HTML elements (virtual dom) easily. Inspired by MithrilJs framework.
+
+- [Installation](#installation)
+- [Examples](#examples)
+- [Documentation](#documentation)
 
 ## Installation
 
-Element Creator is available on NPM and as a Javascript library.
+element-creator is available on NPM and as a Javascript library.
 
 Install on NPM
 
@@ -13,15 +17,42 @@ Install on NPM
 npm install element-creator
 ```
 
-Or include on html file
+Or include on html file on unpkg
 ```html
-<script  type="text/javascript" src="{link-to-element-creator}.js"></script>
+
+<script  type="text/javascript" src="https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js"></script>
 ```
 
-## How to use?
+## Examples:
+
+A one page content example located at `build/index.html`. Or a quick demo below
 
 ```javascript
-e(elementString, children, options)
+// using node with es6, otherwise var e = require('element-creator');
+import e from 'element-creator';
+
+var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
+    on: { 'click': function(e) {
+        alert('You have clicked on My awesome div');
+    }}
+})
+```
+
+The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
+```html
+<div id="myElement" class="class__1" name="awesome-div">My awesome div</div>
+```
+
+
+## Documentation
+
+element-creator contains **Elementextended** (or wrapper) which wraps/adds interactive functions such as **.find**, **.all** to standard element and **ElementCreator** which creates HTML elements then wrap and return an ElementExtended element.
+
+### ElementCreator
+
+```javascript
+// vdom return new element
+var vdom = e(elementString, children, options)
 ```
 Where:
 
@@ -44,23 +75,14 @@ Where:
   - on: add event listener
   - attrs: element's attributes
   - data: element's data
-
-## Examples:
-
-A one page content example located at `build/index.html`. Or a quick demo below
-
+  
+### ElementExtended
+  
 ```javascript
-// using node with es6, otherwise var e = require('element-creator');
-import e from 'element-creator';
-
-var myDiv = e('div#myElement.class__1[name=awesome-div]', 'My awesome div', {
-    on: { 'click': function(e) {
-        alert('You have clicked on My awesome div');
-    }}
-})
+// wrappedElement return a html element within the html body with more interactive functions
+var wrappedElement = e.wrap(querySelector, isMultiple)
 ```
 
-The variable `myDiv` above generates `div` html element with `click` event that prop an alert message.
-```html
-<div id="myElement" class="class__1" name="awesome-div">My awesome div</div>
-```
+Where:
+- **querySelector** is standard query selector string for example `h1` will look for heading `h1`, `.class__1` will look for any element has class `.class__1`.
+- **isMultiple** is `false` by default. If set to `true` it will return an array of element match with querySelector.
