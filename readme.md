@@ -46,8 +46,13 @@ The variable `myDiv` above generates `div` html element with `click` event that 
 
 ## Documentation
 
+element-creator contains **Elementextended** (or wrapper) which wraps/adds interactive functions such as **.find**, **.all** to standard element and **ElementCreator** which creates HTML elements then wrap and return an ElementExtended element.
+
+### ElementCreator
+
 ```javascript
-e(elementString, children, options)
+// vdom return new element
+var vdom = e(elementString, children, options)
 ```
 Where:
 
@@ -70,3 +75,14 @@ Where:
   - on: add event listener
   - attrs: element's attributes
   - data: element's data
+  
+### ElementExtended
+  
+```javascript
+// wrappedElement return a html element within the html body with more interactive functions
+var wrappedElement = e.wrap(querySelector, isMultiple)
+```
+
+Where:
+- **querySelector** is standard query selector string for example `h1` will look for heading `h1`, `.class__1` will look for any element has class `.class__1`.
+- **isMultiple** is `false` by default. If set to `true` it will return an array of element match with querySelector.
