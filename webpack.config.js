@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "element-creator.js"
+    filename: "element-creator.min.js"
   },
   plugins: [
     new MinifyPlugin()
