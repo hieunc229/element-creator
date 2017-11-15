@@ -1,6 +1,6 @@
 {
   "name": "element-creator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A javascript library that helps creating html elements easily. Inspired by mithriljs framework.",
   "main": "index.js",
   "scripts": {
