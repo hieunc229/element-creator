@@ -1,5 +1,6 @@
 import { ElementEvents } from './utils';
 import { ElementScrollTo } from './effects';
+import BrowserUtils from './utils/BrowserUtils';
 
 /**
  * Turn a HTMLElement object into a Element object
@@ -80,7 +81,7 @@ const ElementExtended = (selector, isMultiple = false) => {
         },
 
         on: (eventName, callback) => {
-            if (eventName == 'touchstart') {
+            if (eventName == 'touchstart' || (BrowserUtils.IsOnMobile && eventName == 'click')) {
                 var touchmoved = false;
                 htmlElement.addEventListener('touchend', () => {
                     if (!touchmoved) {

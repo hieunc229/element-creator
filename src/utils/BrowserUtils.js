@@ -1,6 +1,6 @@
 // An long solution
 // function isOnMobile() {
-//     let check = false, userAgent;
+//     var check = false, userAgent;
 
 //     if (typeof navigator != 'undefined') {
 //         userAgent = navigator ? navigator.userAgent : navigator.vendor || window.opera || false;
