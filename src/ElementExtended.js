@@ -81,7 +81,7 @@ const ElementExtended = (selector, isMultiple = false) => {
         },
 
         on: (eventName, callback) => {
-            if (eventName == 'touchstart' || (BrowserUtils.IsOnMobile && eventName == 'click')) {
+            if (BrowserUtils.IsOnMobile && eventName == 'click') {
                 var touchmoved = false;
                 htmlElement.addEventListener('touchend', () => {
                     if (!touchmoved) {

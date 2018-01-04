@@ -20,7 +20,7 @@ npm install element-creator
 Or include on html file on unpkg
 ```html
 
-<script  type="text/javascript" src="https://unpkg.com/element-creator@1.0.2/build/element-creator.min.js"></script>
+<script  type="text/javascript" src="https://unpkg.com/element-creator@1.0.5/build/element-creator.min.js"></script>
 ```
 
 ## Examples:
